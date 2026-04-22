@@ -32,3 +32,6 @@ _(you **might** want to change certain fields like port n° & mode)_
 `gridfs-address` : grisfs persistor bus address (default : "wse.gridfs.persistor")<br>
 `alertStorage` : value in percent, threshold at which the user will be notified when free space is now (default : 80)<br>
 `image-resizer-address` : image resizer module bus address (default : "wse.image.resizer")<br>
+
+
+Ce dépôt est un miroir officiel du dépôt Edifice : https://github.com/edificeio/rack
