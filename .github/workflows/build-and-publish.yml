@@ -49,7 +49,8 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build frontend workspace
-        run: pnpm --filter "@edifice.io/rack-frontend" build
+        working-directory: frontend
+        run: npx vite build
 
       - name: Upload frontend dist
         uses: actions/upload-artifact@v4
