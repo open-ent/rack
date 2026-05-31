@@ -6,7 +6,7 @@ import {
 } from "@tanstack/react-query";
 import { rackService } from "../api/rack.service";
 import { useTranslation } from "react-i18next";
-import { useEdificeClient, useToast } from "@edifice.io/react";
+import { useEdificeClient, useToast } from "@open-ent/react";
 
 export const rackQueryOptions = {
   getDocuments: () =>

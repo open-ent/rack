@@ -1,4 +1,4 @@
-import { LoadingScreen } from "@edifice.io/react";
+import { LoadingScreen } from "@open-ent/react";
 import { QueryClient } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

@@ -1,7 +1,7 @@
 import { HttpAdapter } from "./adapters/http-adapter";
 import { FetchAdapter } from "./adapters/fetch-adapter";
 import { HttpServiceAdapter } from "./adapters/http-service-adapter";
-import type { odeServices } from "@edifice.io/client";
+import type { odeServices } from "@open-ent/client";
 type HttpService = ReturnType<typeof odeServices.http>;
 
 /**
@@ -87,7 +87,7 @@ export abstract class BaseApiClient {
    *
    * @example
    * // With Edifice HttpService
-   * import { odeServices } from '@edifice.io/client';
+   * import { odeServices } from '@open-ent/client';
    *
    * const client = new RackClient({
    *   httpService: odeServices.http(),

@@ -1,4 +1,4 @@
-import type { odeServices } from "@edifice.io/client";
+import type { odeServices } from "@open-ent/client";
 import { HttpAdapter } from "./http-adapter";
 type HttpService = ReturnType<typeof odeServices.http>;
 /**
@@ -6,7 +6,7 @@ type HttpService = ReturnType<typeof odeServices.http>;
  * Translates between the HttpAdapter interface and Edifice's HttpService
  *
  * @example
- * import { odeServices } from '@edifice.io/client';
+ * import { odeServices } from '@open-ent/client';
  * import { HttpServiceAdapter } from './adapters/http-service-adapter';
  *
  * // Create HttpService

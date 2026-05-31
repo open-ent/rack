@@ -1,15 +1,15 @@
-import { Menu, Tree, useEdificeClient } from "@edifice.io/react";
+import { Menu, Tree, useEdificeClient } from "@open-ent/react";
 import {
   IconDepositeInbox as Inbox,
   IconInbox,
   IconDelete as Trash,
-} from "@edifice.io/react/icons";
+} from "@open-ent/react/icons";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useMenuData } from "../hooks/useMenuData";
 import { useDocumentListStore } from "~/features/document-list/store/documentListStore";
 import { ProgressBar, ProgressBarProps } from "~/components/lib/ProgressBar";
-import type { TreeItem } from "@edifice.io/react";
+import type { TreeItem } from "@open-ent/react";
 import type { DocumentFilter } from "~/features/document-list/hooks/useFilteredDocuments";
 
 export const DesktopMenu = () => {

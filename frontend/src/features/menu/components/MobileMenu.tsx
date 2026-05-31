@@ -1,9 +1,9 @@
-import { Dropdown, useEdificeClient } from "@edifice.io/react";
+import { Dropdown, useEdificeClient } from "@open-ent/react";
 import {
   IconInbox as Inbox,
   IconFolderAdd as FolderOpen,
   IconDelete as Trash,
-} from "@edifice.io/react/icons";
+} from "@open-ent/react/icons";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useMenuStore } from "../store/menuStore";

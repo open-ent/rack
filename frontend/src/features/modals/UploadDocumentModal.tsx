@@ -5,7 +5,7 @@ import {
   useEdificeClient,
   Combobox,
   Dropzone,
-} from "@edifice.io/react";
+} from "@open-ent/react";
 import { useTranslation } from "react-i18next";
 import { createPortal } from "react-dom";
 import { useUploadActions } from "./hooks/useUploadActions";

@@ -1,4 +1,4 @@
-import { odeServices } from "@edifice.io/client";
+import { odeServices } from "@open-ent/client";
 import { RackClient } from "@edifice.io/rack-client-rest";
 import {
   CopyToWorkspaceRequestDto,

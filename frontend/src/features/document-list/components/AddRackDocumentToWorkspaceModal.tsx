@@ -1,5 +1,5 @@
-import { Button, Modal, useEdificeClient } from "@edifice.io/react";
-import { WorkspaceFolders } from "@edifice.io/react/multimedia";
+import { Button, Modal, useEdificeClient } from "@open-ent/react";
+import { WorkspaceFolders } from "@open-ent/react/multimedia";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";

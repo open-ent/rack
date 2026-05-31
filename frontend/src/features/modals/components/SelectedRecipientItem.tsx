@@ -1,5 +1,5 @@
-import { Button, Avatar } from "@edifice.io/react";
-import { IconClose } from "@edifice.io/react/icons";
+import { Button, Avatar } from "@open-ent/react";
+import { IconClose } from "@open-ent/react/icons";
 import { useTranslation } from "react-i18next";
 import type { Recipient } from "../hooks/useUploadSearch";
 import groupAvatar from "~/assets/images/group-avatar.svg";

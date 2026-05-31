@@ -25,4 +25,4 @@ backend/src/main/resources/public/*
 !backend/src/main/resources/public/template
 backend/src/main/resources/view/index.html
 backend/src/main/resources/*.html
-# backend/src/main/resources/view
+# backend/src/main/resources/view.pnpm-store/

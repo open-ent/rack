@@ -1,5 +1,5 @@
-import { useEdificeClient } from "@edifice.io/react";
-import { IQuotaAndUsage } from "@edifice.io/client";
+import { useEdificeClient } from "@open-ent/react";
+import { IQuotaAndUsage } from "@open-ent/client";
 
 /**
  * Custom hook to retrieve menu data including quota and usage information.

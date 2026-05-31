@@ -1,6 +1,6 @@
-import { ImageEditor, UploadCard } from "@edifice.io/react";
-import { customSize } from "@edifice.io/utilities";
-import { useDropzoneContext } from "@edifice.io/react";
+import { ImageEditor, UploadCard } from "@open-ent/react";
+import { customSize } from "@open-ent/utilities";
+import { useDropzoneContext } from "@open-ent/react";
 import { useEffect, useRef, useState, useCallback } from "react";
 
 interface UploadFilesDropzoneProps {

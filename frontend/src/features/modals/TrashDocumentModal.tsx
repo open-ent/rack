@@ -1,4 +1,4 @@
-import { Alert, Button, Modal, useEdificeClient } from "@edifice.io/react";
+import { Alert, Button, Modal, useEdificeClient } from "@open-ent/react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { useDocumentActionStore } from "~/store/documentActionStore";

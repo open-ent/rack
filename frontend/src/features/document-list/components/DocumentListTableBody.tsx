@@ -4,7 +4,7 @@ import {
   Avatar,
   Flex,
   useEdificeClient,
-} from "@edifice.io/react";
+} from "@open-ent/react";
 import { useTranslation } from "react-i18next";
 import { useDocumentListStore } from "../store/documentListStore";
 import type { RackDocumentDto } from "@edifice.io/rack-client-rest";
