@@ -6,17 +6,17 @@ on:
       - main
       - master
       - develop
-      - '*-patched'
-      - '*-patched-dev'
-    tags: ['*']
+      - "*-patched"
+      - "*-patched-dev"
+    tags: ["*"]
   pull_request:
     branches: [main, master, develop]
   workflow_dispatch:
     inputs:
       entcore_version:
-        description: 'Version entcore (ex: 6.14.9-patched). Laissez vide pour utiliser la version du pom.xml.'
+        description: "Version entcore (ex: 6.14.9-patched). Laissez vide pour utiliser la version du pom.xml."
         required: false
-        default: ''
+        default: ""
 
 permissions:
   contents: write
@@ -46,6 +46,10 @@ jobs:
           restore-keys: ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies (workspace root)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.OPENENT_PACKAGES_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          TIPTAP_PRO_TOKEN: ${{ secrets.TIPTAP_PRO_TOKEN }}
         run: pnpm install --no-frozen-lockfile
 
       - name: Build workspace packages (client-rest then frontend)
@@ -67,7 +71,7 @@ jobs:
 
       - uses: actions/setup-java@v4
         with:
-          java-version: '8'
+          java-version: "8"
           distribution: temurin
           cache: maven
 
