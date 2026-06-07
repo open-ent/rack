@@ -24,11 +24,11 @@
     "typecheck": "tsc -b --noEmit"
   },
   "dependencies": {
-    "@open-ent/utilities": "^2.5.26",
-    "@open-ent/bootstrap": "^2.5.26",
+    "@open-ent/utilities": "^2.5.29",
+    "@open-ent/bootstrap": "^2.5.29",
     "@edifice.io/rack-client-rest": "workspace:*",
-    "@open-ent/client": "^2.5.26",
-    "@open-ent/react": "^2.5.26",
+    "@open-ent/client": "^2.5.29",
+    "@open-ent/react": "^2.5.29",
     "@react-spring/web": "9.7.5",
     "@tanstack/react-query": "5.81.5",
     "@uidotdev/usehooks": "2.4.1",
