@@ -37,7 +37,12 @@ export const useRackDocumentActions = () => {
       });
 
       const results = await Promise.allSettled(uploadPromises);
-      const succeeded = results.filter((r) => r.status === "fulfilled").length;
+      // Un téléchargement échoué résout avec `null` : il ne doit PAS compter comme un
+      // succès (sinon, si tous les téléchargements échouent, on afficherait un faux toast
+      // de succès). On ne compte réussi que les promesses tenues avec une valeur non nulle.
+      const succeeded = results.filter(
+        (r) => r.status === "fulfilled" && r.value != null,
+      ).length;
       const failed = total - succeeded;
 
       if (succeeded === 0) {
