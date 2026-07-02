@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@open-ent/utilities": "^2.5.29",
-    "@open-ent/bootstrap": "^2.5.29",
+    "@open-ent/bootstrap": "2.5.30-patched",
     "@edifice.io/rack-client-rest": "workspace:*",
     "@open-ent/client": "^2.5.29",
     "@open-ent/react": "^2.5.29",
