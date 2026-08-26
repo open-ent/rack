@@ -85,8 +85,8 @@ importers:
         specifier: 1.0.3
         version: 1.0.3(6f7a23b527774951782d15e84e20c8c5)
       "@open-ent/client":
-        specifier: ^2.5.26
-        version: 2.5.29
+        specifier: 2.5.30-patched
+        version: 2.5.30-patched
       "@types/uuid":
         specifier: 10.0.0
         version: 10.0.0
@@ -100,17 +100,17 @@ importers:
         specifier: workspace:*
         version: link:../client/rest
       "@open-ent/bootstrap":
-        specifier: ^2.5.29
-        version: 2.5.29
+        specifier: 2.5.30-patched
+        version: 2.5.30-patched
       "@open-ent/client":
-        specifier: ^2.5.29
-        version: 2.5.29
+        specifier: 2.5.30-patched
+        version: 2.5.30-patched
       "@open-ent/react":
-        specifier: ^2.5.29
-        version: 2.5.29(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/node@22.16.0)(@types/react@18.3.24)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.62.0(react@18.3.1))(react-i18next@14.1.0(i18next@23.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.2)
+        specifier: 2.5.30-patched
+        version: 2.5.30-patched(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/node@22.16.0)(@types/react@18.3.24)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.62.0(react@18.3.1))(react-i18next@14.1.0(i18next@23.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.2)
       "@open-ent/utilities":
-        specifier: ^2.5.29
-        version: 2.5.29
+        specifier: 2.5.30-patched
+        version: 2.5.30-patched
       "@react-spring/web":
         specifier: 9.7.5
         version: 9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1944,25 +1944,25 @@ packages:
         integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==,
       }
 
-  "@open-ent/bootstrap@2.5.29":
+  "@open-ent/bootstrap@2.5.30-patched":
     resolution:
       {
-        integrity: sha512-JJ89u/5frdThtEVTg4CHBsww1/Febr1ndplYxOqArDEjy15BWbJwOs21G9lLOkkPG6J0k2FLhIt8YyduUK1lcQ==,
-        tarball: https://npm.pkg.github.com/download/@open-ent/bootstrap/2.5.29/1bfaefa5d02dbb6e54d55b1764c8ef986624885e,
+        integrity: sha512-nXVzf4eRImEc0b2bU8js4hudM63NjqH1M2Sdj1+7j/SA9NvI2Pu5VxoA1w1qMFZajvM+4QHroCFJ4egTWwIGsg==,
+        tarball: https://npm.pkg.github.com/download/@open-ent/bootstrap/2.5.30-patched/04f817c37394ec3c757a734e256854ffaa053dcc,
       }
 
-  "@open-ent/client@2.5.29":
+  "@open-ent/client@2.5.30-patched":
     resolution:
       {
-        integrity: sha512-L1qvNgo2Tb2gBZlbQftMe3v4PPGsJ7niOS4jTYlIKZWecTdiZc2iXj8wargZTT8Qi+MIxgQ48MFbD5DEVzUqHw==,
-        tarball: https://npm.pkg.github.com/download/@open-ent/client/2.5.29/d6655d0a255ec3315d3055bf7e64dd3f05dff53c,
+        integrity: sha512-7XEGorQyJ0FiPucL9SJur4x5SnPbvwhgfLMhUGDxQXMmQcbLVfrj2m6vuOELNxx10EbFEv+ZYv1AV3Ow4wB+Ug==,
+        tarball: https://npm.pkg.github.com/download/@open-ent/client/2.5.30-patched/5a19821761b659a672368a9c8b61745220c046bc,
       }
 
-  "@open-ent/react@2.5.29":
+  "@open-ent/react@2.5.30-patched":
     resolution:
       {
-        integrity: sha512-//vn531uwqLEhO1cyOVp/bZCjc4jpsy2A4NHFXlwdN8bYFDx/JX8HD0isX7lYal92S4P6bSHN17aG7kenfBRdw==,
-        tarball: https://npm.pkg.github.com/download/@open-ent/react/2.5.29/36bde1d1316847b53ae4ce8386a4894547b16709,
+        integrity: sha512-V7++IHNGctLH8V4VHdDNJEur3pnLYJhEnTQJnJh5wgXpYuvrcvVPnX6gAghDaRQ+T0lCLB9H80YlHjuZhjVSbQ==,
+        tarball: https://npm.pkg.github.com/download/@open-ent/react/2.5.30-patched/8ee49fc0954818aa8d78d72d4a085c54161e1692,
       }
     peerDependencies:
       "@react-spring/web": 9.7.5
@@ -1972,18 +1972,18 @@ packages:
       react-hook-form: 7.71.1
       react-i18next: 14.1.3
 
-  "@open-ent/tiptap-extensions@2.5.29":
+  "@open-ent/tiptap-extensions@2.5.30-patched":
     resolution:
       {
-        integrity: sha512-JTZzId7eZ0fRx2lWot2H2plLJNbE+muMJTVEgk5PQg5jXfEZL5afVKIrGLCUAKlWHwzrO7lnzVi+SiSwvqluqg==,
-        tarball: https://npm.pkg.github.com/download/@open-ent/tiptap-extensions/2.5.29/6c3b0c0b81663a8ca5ed6f98c4d571b608c28b9a,
+        integrity: sha512-FxBlt+R0XtjlkjRdyZqhP54fWgMn4vPycVcwQ9ys3pgXSlDhXbEY+Yvuj9KZX2WhzK4scD1DOWpOa00mruaa8w==,
+        tarball: https://npm.pkg.github.com/download/@open-ent/tiptap-extensions/2.5.30-patched/082e678398ac73c0f59aeceabf089621d5d75594,
       }
 
-  "@open-ent/utilities@2.5.29":
+  "@open-ent/utilities@2.5.30-patched":
     resolution:
       {
-        integrity: sha512-CqnO8uWKj4YiChLMbVUMuuXCleN6rQyz7eFdGMgAXSSpYKs1OWjRX44uwd9BwLqNKQL9ZxeSnUYYyR87dDEXog==,
-        tarball: https://npm.pkg.github.com/download/@open-ent/utilities/2.5.29/2a1fee53423ce4c48e7a0f2f18f7010068a1ea7a,
+        integrity: sha512-lLVDpibWuGua1Tvsuupc2ftvq7CrJK1/LMG2Ttzqyu0bYB3QDCdfAJNPwpS+njFbd6aG219NgtbCQxdft78huQ==,
+        tarball: https://npm.pkg.github.com/download/@open-ent/utilities/2.5.30-patched/a5bae22250522b5d5150e867a393ea540818fc35,
       }
 
   "@pinojs/redact@0.4.0":
@@ -3857,6 +3857,7 @@ packages:
         integrity: sha512-KRYzxepc14G/CEpEGc3Yn+JKaAeT63smlDr+vjB8jRfgTBBI9wRj/nkQEO+ucV8p8I9bfKLWp37uHgFrbntPvw==,
       }
     engines: { node: ">=10.0.0" }
+    deprecated: this version has critical issues, please update to the latest version
 
   "@yarnpkg/lockfile@1.1.0":
     resolution:
@@ -11287,30 +11288,30 @@ snapshots:
 
   "@open-draft/until@2.1.0": {}
 
-  "@open-ent/bootstrap@2.5.29":
+  "@open-ent/bootstrap@2.5.30-patched":
     dependencies:
       "@popperjs/core": 2.11.8
       bootstrap: 5.3.8(@popperjs/core@2.11.8)
 
-  "@open-ent/client@2.5.29":
+  "@open-ent/client@2.5.30-patched":
     dependencies:
-      "@open-ent/utilities": 2.5.29
+      "@open-ent/utilities": 2.5.30-patched
       axios: 1.13.4
       core-js: 3.48.0
       ua-parser-js: 2.0.9
     transitivePeerDependencies:
       - debug
 
-  "@open-ent/react@2.5.29(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/node@22.16.0)(@types/react@18.3.24)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.62.0(react@18.3.1))(react-i18next@14.1.0(i18next@23.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.2)":
+  "@open-ent/react@2.5.30-patched(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/node@22.16.0)(@types/react@18.3.24)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.62.0(react@18.3.1))(react-i18next@14.1.0(i18next@23.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.2)":
     dependencies:
       "@ant-design/icons": 5.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@dnd-kit/core": 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@dnd-kit/sortable": 8.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       "@dnd-kit/utilities": 3.2.2(react@18.3.1)
       "@floating-ui/react": 0.26.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      "@open-ent/bootstrap": 2.5.29
-      "@open-ent/tiptap-extensions": 2.5.29(@types/node@22.16.0)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.2)
-      "@open-ent/utilities": 2.5.29
+      "@open-ent/bootstrap": 2.5.30-patched
+      "@open-ent/tiptap-extensions": 2.5.30-patched(@types/node@22.16.0)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.2)
+      "@open-ent/utilities": 2.5.30-patched
       "@popperjs/core": 2.11.8
       "@react-spring/web": 9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@sentry/react": 8.55.2(react@18.3.1)
@@ -11389,9 +11390,9 @@ snapshots:
       - terser
       - typescript
 
-  "@open-ent/tiptap-extensions@2.5.29(@types/node@22.16.0)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.2)":
+  "@open-ent/tiptap-extensions@2.5.30-patched(@types/node@22.16.0)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.2)":
     dependencies:
-      "@open-ent/utilities": 2.5.29
+      "@open-ent/utilities": 2.5.30-patched
       "@tiptap/core": 2.11.0(@tiptap/pm@2.11.0)
       "@tiptap/extension-blockquote": 2.11.0(@tiptap/core@2.11.0(@tiptap/pm@2.11.0))
       "@tiptap/extension-bold": 2.11.0(@tiptap/core@2.11.0(@tiptap/pm@2.11.0))
@@ -11434,7 +11435,7 @@ snapshots:
       - terser
       - typescript
 
-  "@open-ent/utilities@2.5.29": {}
+  "@open-ent/utilities@2.5.30-patched": {}
 
   "@pinojs/redact@0.4.0": {}
 

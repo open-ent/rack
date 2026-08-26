@@ -63,7 +63,7 @@
     "pnpm": ">=8"
   },
   "devDependencies": {
-    "@open-ent/client": "^2.5.26",
+    "@open-ent/client": "2.5.30-patched",
     "@edifice.io/edifice-nestjs-core": "1.0.3",
     "@types/uuid": "10.0.0",
     "tsc-alias": "1.8.16"
