@@ -44,7 +44,7 @@ for (const line of lines) {
     skipping = false;
   } else if (/^ {2}\S/.test(line)) {
     // Nouvelle entrée de la section courante : elle décide si on saute le bloc
-    skipping = PURGED_SECTIONS.has(section) && /^ {2}'@open-ent\//.test(line);
+    skipping = PURGED_SECTIONS.has(section) && /^ {2}['"]@open-ent\//.test(line);
     if (skipping) removed.push(`${section} > ${line.trim().replace(/:$/, '')}`);
   }
 
