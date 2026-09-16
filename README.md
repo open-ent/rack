@@ -35,3 +35,15 @@ _(you **might** want to change certain fields like port n° & mode)_
 
 
 Ce dépôt est un miroir officiel du dépôt Edifice : https://github.com/edificeio/rack
+
+
+### Aide contextuelle
+
+Le frontend consomme `@open-ent/context-help@0.1.0` depuis GitHub Packages via l'alias
+npm `@openent/context-help`. Les imports existants restent inchangés ; aucune archive
+locale `vendor/*.tgz` n'est nécessaire.
+
+Le scope `@open-ent` est déjà configuré dans les fichiers `.npmrc` du workspace et du
+frontend. En local, fournir `NODE_AUTH_TOKEN` avec accès en lecture aux packages de
+l'organisation `open-ent`. La CI utilise le secret existant `OPENENT_PACKAGES_TOKEN`.
+Ne pas enregistrer le jeton dans le dépôt.

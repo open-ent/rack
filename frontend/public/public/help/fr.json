@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "language": "fr",
+  "entries": {
+    "structures.bulk-actions": {
+      "title": "Actions groupées sur les établissements",
+      "summary": "Appliquez une opération aux établissements sélectionnés dans votre périmètre administrable. Ces commandes sont réservées aux référents collectivité et aux super-administrateurs.",
+      "steps": [
+        "Application : activer ou désactiver les accès pour les profils choisis.",
+        "Blocage : bloquer ou débloquer les utilisateurs d'un profil.",
+        "Export CSV : télécharger les utilisateurs des établissements sélectionnés.",
+        "RGPD : réinitialiser la préférence de consentement des comptes concernés.",
+        "Traiter au maximum 40 établissements par requête et vérifier le compte rendu des opérations."
+      ],
+      "docUrl": "https://doc.tech.fr/open-ent-dev/docs/modules/administration/etablissements/#actions-group%C3%A9es-sur-une-s%C3%A9lection-d%C3%A9tablissements-rattach%C3%A9s"
+    },
+    "rack.deposer-document": {
+      "title": "Déposer un document dans le casier",
+      "summary": "Le casier permet de transmettre un document à un utilisateur ou à un groupe autorisé par les règles de communication de votre établissement.",
+      "steps": [
+        "Cliquer sur Déposer, puis sélectionner les fichiers à transmettre.",
+        "Rechercher et sélectionner les destinataires.",
+        "Vérifier les fichiers et les destinataires avant de confirmer le dépôt.",
+        "Retrouver les documents envoyés dans Mes dépôts."
+      ],
+      "docUrl": "https://doc.tech.fr/open-ent-dev/docs/modules/applications/casier/#d%C3%A9poser-un-document"
+    },
+    "users.functions.referent-collectivite": {
+      "title": "Référent collectivité ou Collectivité locale ?",
+      "summary": "Le référent collectivité administre un réseau d'établissements. La fonction Collectivité locale est réservée aux ressources réservables et au patrimoine.",
+      "steps": [
+        "Seul un super-administrateur peut attribuer Référent collectivité.",
+        "Le référent a également besoin du périmètre ADML pour agir sur les comptes et les accès des établissements.",
+        "Attribuer Collectivité locale à un agent métier ne lui donne pas les privilèges territoriaux."
+      ],
+      "docUrl": "https://doc.tech.fr/open-ent-dev/docs/profils-utilisateurs/referent-collectivite#attribuer-le-r%C3%B4le"
+    }
+  }
+}

@@ -96,6 +96,9 @@ importers:
 
   frontend:
     dependencies:
+      '@openent/context-help':
+        specifier: npm:@open-ent/context-help@0.1.0
+        version: '@open-ent/context-help@0.1.0(react@18.3.1)'
       "@edifice.io/rack-client-rest":
         specifier: workspace:*
         version: link:../client/rest
@@ -228,6 +231,12 @@ importers:
         version: 5.1.4(typescript@5.9.2)(vite@5.4.20(@types/node@22.16.0)(terser@5.44.1))
 
 packages:
+
+  '@open-ent/context-help@0.1.0':
+    resolution: {integrity: sha512-xrZYeimjFnVIbMYGeRpuxM8ibwvDXkDkMGYJ9Q69GfCqjvkZ0FBVeRdCUKs7wdx03D4l7Sf8p3BrBVug+MYYvA==, tarball: https://npm.pkg.github.com/download/@open-ent/context-help/0.1.0/7058bc8c212a98dc41419f88df4558107bb36b8e}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
+
   "@adobe/css-tools@4.4.4":
     resolution:
       {
@@ -10008,6 +10017,11 @@ packages:
         optional: true
 
 snapshots:
+
+  '@open-ent/context-help@0.1.0(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+
   "@adobe/css-tools@4.4.4": {}
 
   "@ampproject/remapping@2.3.0":

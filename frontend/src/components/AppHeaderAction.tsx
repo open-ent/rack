@@ -1,3 +1,4 @@
+import { ContextHelp } from "./ContextHelp";
 import { Button, useEdificeClient, useHasWorkflow } from "@open-ent/react";
 import { IconDepositeInbox as Upload } from "@open-ent/react/icons";
 import { useTranslation } from "react-i18next";
@@ -35,6 +36,7 @@ export function AppActionHeader() {
       >
         {t("rack.upload")}
       </Button>
+      <ContextHelp />
     </div>
   );
 }
