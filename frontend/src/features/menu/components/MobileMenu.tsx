@@ -1,12 +1,12 @@
 import { WORKFLOW_RIGHTS } from "@edifice.io/collect-frontend/lib";
-import { Dropdown, useEdificeClient, useHasWorkflow } from "@edifice.io/react";
+import { Dropdown, useEdificeClient, useHasWorkflow } from "@open-ent/react";
 import {
   IconInbox as Inbox,
   IconFolderAdd as FolderOpen,
   IconDelete as Trash,
   IconSubmission,
   IconCollect,
-} from "@edifice.io/react/icons";
+} from "@open-ent/react/icons";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useMenuStore } from "../store/menuStore";

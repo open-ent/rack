@@ -1,6 +1,6 @@
 import React, { StrictMode } from "react";
 
-import { EdificeThemeProvider } from "@edifice.io/react";
+import { EdificeThemeProvider } from "@open-ent/react";
 import { createRoot } from "react-dom/client";
 
 import { RouterProvider } from "react-router-dom";
@@ -8,8 +8,12 @@ import "./i18n";
 import { Providers, queryClient } from "./providers";
 import { router } from "./routes";
 
-import "@edifice.io/bootstrap/dist/index.css";
 import "./index.css";
+
+// Le bootstrap openent n'est PAS bundlé : il est chargé au runtime via
+// <link href="/assets/themes/openent-bootstrap/index.css"> dans index.html, comme pour
+// blog / wiki / calendar. Le bundler ne voit donc plus son `@import url("/theme/brand.css")`
+// (chemin servi par l'hôte, que `vite build` prenait pour un fichier local → ENOENT).
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement!);

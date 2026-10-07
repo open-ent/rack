@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { useSearchUsers } from "~/services/queries/rack.queries";
-import { odeServices } from "@edifice.io/client";
-import { useIsAdmlcOrAdmc } from "@edifice.io/react";
+import { odeServices } from "@open-ent/client";
+import { useIsAdmlcOrAdmc } from "@open-ent/react";
 
 export interface RecipientOption {
   value: string;

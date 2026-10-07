@@ -23,6 +23,7 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
+      "@edifice.io/collect-frontend/lib": ["src/shims/collect-frontend.tsx"],
       "@images/*": ["node_modules/@edifice.io/bootstrap/dist/images/*"]
     },
     "types": ["vite/client", "vitest/globals", "vitest/importMeta", "vitest"]

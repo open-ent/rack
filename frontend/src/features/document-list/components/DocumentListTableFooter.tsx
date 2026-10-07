@@ -1,8 +1,8 @@
-import { Flex, IconButton } from "@edifice.io/react";
+import { Flex, IconButton } from "@open-ent/react";
 import {
   IconRafterLeft as ChevronLeft,
   IconRafterRight as ChevronRight,
-} from "@edifice.io/react/icons";
+} from "@open-ent/react/icons";
 import { useDocumentListStore } from "../store/documentListStore";
 import { useConfigStore } from "~/store/configStore";
 import type { RackDocumentDto } from "@edifice.io/rack-client-rest";

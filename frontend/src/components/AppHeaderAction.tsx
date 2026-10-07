@@ -1,5 +1,6 @@
-import { Button, useEdificeClient, useHasWorkflow } from "@edifice.io/react";
-import { IconDepositeInbox as Upload } from "@edifice.io/react/icons";
+import { ContextHelp } from "./ContextHelp";
+import { Button, useEdificeClient, useHasWorkflow } from "@open-ent/react";
+import { IconDepositeInbox as Upload } from "@open-ent/react/icons";
 import { useTranslation } from "react-i18next";
 import { RACK_WORKFLOW_RIGHTS } from "~/constants/rights.constants";
 import { useRackStore } from "~/store/rackStore";
@@ -36,6 +37,7 @@ export function AppActionHeader() {
       >
         {t("rack.upload")}
       </Button>
+      <ContextHelp />
     </div>
   );
 }

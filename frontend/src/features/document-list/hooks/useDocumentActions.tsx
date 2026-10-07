@@ -2,16 +2,16 @@ import {
   useBreakpoint,
   useEdificeClient,
   useHasWorkflow,
-} from "@edifice.io/react";
+} from "@open-ent/react";
 import {
   IconDelete as Delete,
   IconRestore as Restore,
   IconFolderAdd,
-} from "@edifice.io/react/icons";
+} from "@open-ent/react/icons";
 import { useTranslation } from "react-i18next";
 import { useDocumentActionStore } from "~/store/documentActionStore";
 import { useDocumentListStore } from "../store/documentListStore";
-import type { ToolbarItem } from "@edifice.io/react";
+import type { ToolbarItem } from "@open-ent/react";
 import { RACK_WORKFLOW_RIGHTS } from "~/constants/rights.constants";
 
 /**

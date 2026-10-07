@@ -49,10 +49,26 @@ export default ({ mode }: { mode: string }) => {
     root: __dirname,
     cacheDir: "./node_modules/.vite/rack",
     resolve: {
+      dedupe: [
+        "react",
+        "react-dom",
+        "@tanstack/react-query",
+        "react-i18next",
+        "i18next",
+        "@open-ent/client",
+        "@open-ent/react",
+        "@open-ent/bootstrap",
+        "@open-ent/utilities",
+      ],
       alias: {
+        // Collecte non disponible chez nous : voir src/shims/collect-frontend.tsx
+        "@edifice.io/collect-frontend/lib": resolve(
+          __dirname,
+          "src/shims/collect-frontend.tsx",
+        ),
         "@images": resolve(
           __dirname,
-          "node_modules/@edifice.io/bootstrap/dist/images",
+          "node_modules/@open-ent/bootstrap/dist/images",
         ),
       },
     },

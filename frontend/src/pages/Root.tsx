@@ -6,7 +6,7 @@ import {
   LoadingScreen,
   useBreakpoint,
   useEdificeClient,
-} from "@edifice.io/react";
+} from "@open-ent/react";
 import { QueryClient } from "@tanstack/react-query";
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import {

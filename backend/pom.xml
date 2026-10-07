@@ -4,71 +4,52 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>io.edifice</groupId>
-    <artifactId>app-parent</artifactId>
-    <version>1.2.1</version>
-  </parent>
-  <groupId>fr.wseduc</groupId>
-  <artifactId>rack</artifactId>
-  <version>3.2.10</version>
-  <scm>
-    <connection>scm:git:https://github.com/opendigitaleducation/rack.git</connection>
-    <developerConnection>scm:git:https://github.com/opendigitaleducation/rack.git</developerConnection>
-    <url>https://github.com/opendigitaleducation/rack</url>
-  </scm>
-  <repositories>
-    <repository>
-      <id>ode</id>
-      <name>ODE Repository</name>
-      <url>https://maven.opendigitaleducation.com/nexus/content/groups/public</url>
-    </repository>
-  </repositories>
-  <properties>
-    <entCoreVersion>6.16.11</entCoreVersion>
-    <modMongoVersion>4.2.0</modMongoVersion>
-    <modJsonSchemaValidatorVersion>2.2.0</modJsonSchemaValidatorVersion>
-    <entCoreLibsVersion>6.16.4</entCoreLibsVersion>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>io.vertx</groupId>
-      <artifactId>vertx-core</artifactId>
-      <version>${vertxVersion}</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.entcore</groupId>
-      <artifactId>common</artifactId>
-      <version>${entCoreLibsVersion}</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.entcore</groupId>
-      <artifactId>common</artifactId>
-      <version>${entCoreLibsVersion}</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.vertx</groupId>
-      <artifactId>mod-mongo-persistor</artifactId>
-      <version>${modMongoVersion}</version>
-      <scope>runtime</scope>
-      <classifier>fat</classifier>
-    </dependency>
-    <dependency>
-      <groupId>org.entcore</groupId>
-      <artifactId>session</artifactId>
-      <version>${entCoreLibsVersion}</version>
-      <scope>runtime</scope>
-      <classifier>fat</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.opendigitaleducation</groupId>
-      <artifactId>mod-json-schema-validator</artifactId>
-      <version>${modJsonSchemaValidatorVersion}</version>
-      <scope>runtime</scope>
-      <classifier>fat</classifier>
-    </dependency>
-  </dependencies>
+    <parent>
+        <groupId>fr.openent</groupId>
+        <artifactId>app-parent</artifactId>
+        <version>1.2.0</version>
+    </parent>
+
+    <groupId>fr.wseduc</groupId>
+    <artifactId>rack</artifactId>
+    <version>3.1.7-patched</version>
+
+    <scm>
+        <connection>scm:git:https://github.com/opendigitaleducation/rack.git</connection>
+        <developerConnection>scm:git:https://github.com/opendigitaleducation/rack.git</developerConnection>
+        <url>https://github.com/opendigitaleducation/rack</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>ode</id>
+            <name>ODE Repository</name>
+            <url>https://maven.opendigitaleducation.com/nexus/content/groups/public</url>
+        </repository>
+      <repository>
+        <id>pt-releases</id>
+        <name>rct-nexus maven-releases (entcore-libs patchées)</name>
+        <url>https://rct-nexus.tech.fr/repository/maven-releases/</url>
+      </repository>
+    </repositories>
+
+    <properties>
+        <entCoreVersion>6.16.14-patched</entCoreVersion>
+        <entCoreLibsVersion>6.16.8-patched</entCoreLibsVersion>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+            <version>${vertxVersion}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.entcore</groupId>
+            <artifactId>common</artifactId>
+            <version>${entCoreLibsVersion}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

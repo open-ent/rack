@@ -1,4 +1,4 @@
-import { useUser } from "@edifice.io/react";
+import { useUser } from "@open-ent/react";
 import { useEffect, useState } from "react";
 import type { RackDocumentDto } from "@edifice.io/rack-client-rest";
 

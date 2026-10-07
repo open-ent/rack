@@ -1,4 +1,4 @@
-import { Checkbox, Toolbar, useEdificeClient } from "@edifice.io/react";
+import { Checkbox, Toolbar, useEdificeClient } from "@open-ent/react";
 import { useTranslation } from "react-i18next";
 import { useDocumentListStore } from "../store/documentListStore";
 import { useDocumentActions } from "../hooks/useDocumentActions";

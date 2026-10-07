@@ -1,3 +1,7 @@
 {
-  "timeline.rack.post": " filed in your rack the document : "
+  "timeline.rack.post": " filed in your rack the document : ",
+  "rack": "Rack",
+  "rack.push.notif.rack-post": "Rack: Document filed in a rack",
+  "rack.rack-post": "Document filed in a rack",
+  "rack.storage": "Storage space almost full"
 }

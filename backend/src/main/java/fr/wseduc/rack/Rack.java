@@ -33,6 +33,7 @@ import org.entcore.common.storage.StorageFactory;
 import org.entcore.common.storage.impl.MongoDBApplicationStorage;
 
 import fr.wseduc.rack.controllers.RackController;
+import fr.wseduc.rack.controllers.UserRackAdminController;
 import fr.wseduc.rack.security.RackResourcesProvider;
 import fr.wseduc.rack.services.RackRepositoryEvent;
 import io.vertx.core.json.JsonObject;
@@ -59,6 +60,8 @@ public class Rack extends BaseServer {
 		setDefaultResourceFilter(new RackResourcesProvider());
 
 		addController(rackController);
+		// Casier d'un compte : liste et purge, réservées au super-admin (dashboard).
+		addController(new UserRackAdminController(storage));
 		setRepositoryEvents(new RackRepositoryEvent(vertx, storage));
 		return Future.succeededFuture();
 	}

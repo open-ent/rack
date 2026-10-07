@@ -1,4 +1,4 @@
-import { LoadingScreen, Table } from "@edifice.io/react";
+import { LoadingScreen, Table } from "@open-ent/react";
 import { useRackDocuments } from "~/services/queries/rack.queries";
 import { useFilteredDocuments } from "../hooks/useFilteredDocuments";
 import { useDocumentListSort } from "../hooks/useDocumentListSort";

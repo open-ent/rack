@@ -28,3 +28,7 @@ backend/src/main/resources/view/index.html
 backend/src/main/resources/*.html
 # backend/src/main/resources/view
 .pnpm-store
+# backend/src/main/resources/view.pnpm-store/
+.pnpm-store/
+.npmrc
+frontend/.npmrc
