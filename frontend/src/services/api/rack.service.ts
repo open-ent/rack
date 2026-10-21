@@ -11,39 +11,6 @@ import {
 import { useConfigStore } from "~/store/configStore";
 
 /**
- * Le client HTTP du socle ne lève pas sur une erreur (400/403/500) : il renvoie
- * la réponse d'erreur, donc un envoi refusé était affiché « réussi ».
- * `unwrap` lève dès que la dernière réponse est une erreur.
- * Ex. : un dépôt refusé en 403 déclenche désormais `onError` et le toast d'échec.
- */
-export const unwrap = async <T>(promise: Promise<T>): Promise<T> => {
-  const result = await promise;
-  const http = odeServices.http();
-  if (http.isResponseError()) {
-    const message =
-      (result as { error?: string } | undefined)?.error ??
-      http.latestResponse?.statusText;
-    throw new Error(message || "http-error");
-  }
-  return result;
-};
-
-/** Enveloppe le client HTTP pour que chaque appel passe par `unwrap`. */
-const strictHttpService = () => {
-  const http = odeServices.http();
-  return new Proxy(http, {
-    get(target, prop, receiver) {
-      const value = Reflect.get(target, prop, receiver);
-      if (typeof value !== "function" || prop === "isResponseError") {
-        return typeof value === "function" ? value.bind(target) : value;
-      }
-      return (...args: unknown[]) =>
-        unwrap(Promise.resolve(value.apply(target, args)));
-    },
-  });
-};
-
-/**
  * Initialize Rack client with config from store
  */
 const initializeRackClient = () => {
@@ -51,7 +18,7 @@ const initializeRackClient = () => {
   const baseUrl = config?.api.baseUrl || "/rack";
 
   return new RackClient({
-    httpService: strictHttpService(),
+    httpService: odeServices.http(),
     baseUrl,
   });
 };
@@ -90,9 +57,7 @@ export const rackService = {
     if (data.application) {
       formData.append("application", data.application);
     }
-    return unwrap(
-      odeServices.http().postFile("/rack", formData, { headers: {} }),
-    );
+    return odeServices.http().postFile("/rack", formData, { headers: {} });
   },
   postRacks: (data: {
     files: File[];
@@ -107,16 +72,14 @@ export const rackService = {
         if (data.application) {
           formData.append("application", data.application);
         }
-        return unwrap(
-          odeServices.http().postFile("/rack", formData, { headers: {} }),
-        );
+        return odeServices.http().postFile("/rack", formData, { headers: {} });
       }),
     );
   },
   searchUsersV2: async (): Promise<ListUsersResponseDto> => {
-    const response = await unwrap(
-      odeServices.http().get(`/communication/visible/search`, {}),
-    );
+    const response = await odeServices
+      .http()
+      .get(`/communication/visible/search`, {});
     if (!Array.isArray(response)) {
       throw new Error("Error fetching users" + JSON.stringify(response));
     }
