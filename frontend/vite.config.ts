@@ -132,7 +132,14 @@ export default ({ mode }: { mode: string }) => {
       chunkSizeWarningLimit: 5000,
       rollupOptions: {
         output: {
-          inlineDynamicImports: true,
+          // Dépendances en chunks à part : leur empreinte ne bouge pas d'une release du module à
+          // l'autre, le navigateur les garde. @open-ent reste dans vendor : un paquet tiers le réimporte
+          // (chunks circulaires sinon).
+          manualChunks(id: string) {
+            if (!id.includes("node_modules")) return;
+            if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|@remix-run[\\/]router|scheduler)[\\/]/.test(id)) return "react";
+            return "vendor";
+          },
         },
       },
     },
