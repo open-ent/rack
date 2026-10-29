@@ -239,7 +239,7 @@ public class RackController extends MongoDbControllerHelper {
 							/* Query user and check existence */
 							String query =
 									"MATCH (n:User) " +
-									"WHERE n.id = {id} " +
+									"WHERE n.id = $id " +
 									"RETURN count(n) as nb, n.displayName as username";
 							Map<String, Object> params = new HashMap<>();
 							params.put("id", to);
@@ -517,16 +517,16 @@ public class RackController extends MongoDbControllerHelper {
 
 	private void getVisibleRackUsers(final HttpServerRequest request, final String search, final Handler<JsonObject> handler){
 		final String customReturn =
-				"MATCH visibles-[:IN]->(:Group)-[:AUTHORIZED]->(:Role)-[:AUTHORIZE]->(a:Action) " +
+				"MATCH (visibles)-[:IN]->(:Group)-[:AUTHORIZED]->(:Role)-[:AUTHORIZE]->(a:Action) " +
 				"USING INDEX a:Action(name) " +
-				"WHERE has(a.name) AND a.name={action} AND NOT has(visibles.activationCode) " +
+				"WHERE a.name IS NOT NULL AND a.name=$action AND NOT visibles.activationCode IS NOT NULL " +
 				"RETURN distinct visibles.id as id, visibles.displayName as username, visibles.lastName as name, HEAD(visibles.profiles) as profile " +
 				"ORDER BY name ";
 		String searchTerm = null;
 		if (search != null && !search.trim().isEmpty()) {
 			searchTerm = normalize(search);
 		}
-		final String prefilter = searchTerm == null ? null : " AND m.displayNameSearchField CONTAINS {searchTerm}";
+		final String prefilter = searchTerm == null ? null : " AND m.displayNameSearchField CONTAINS $searchTerm";
 		final JsonObject params = new JsonObject().put("action", "fr.wseduc.rack.controllers.RackController|listRack");
 		if (searchTerm != null) {
 			params.put("searchTerm", searchTerm);
@@ -595,7 +595,7 @@ public class RackController extends MongoDbControllerHelper {
 	public void listUsersInGroup(final HttpServerRequest request) {
 		final String groupId = request.params().get("groupId");
 		final String customReturn =
-				"MATCH visibles-[:IN]->(:Group {id : {groupId}}) " +
+				"MATCH (visibles)-[:IN]->(:Group {id : $groupId}) " +
 				"RETURN distinct visibles.id as id, visibles.displayName as username, visibles.lastName as name, HEAD(visibles.profiles) as profile " +
 				"ORDER BY name ";
 		final JsonObject params = new JsonObject()
