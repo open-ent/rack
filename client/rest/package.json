@@ -60,7 +60,7 @@
   },
   "engines": {
     "node": ">=22",
-    "pnpm": ">=8"
+    "pnpm": ">=10.34.5"
   },
   "devDependencies": {
     "@open-ent/client": "2.5.30-patched",
